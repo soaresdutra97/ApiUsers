@@ -23,6 +23,11 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.gravaUsuarios(usuarioRequestDTO));
     }
 
+    @PutMapping()
+    public ResponseEntity<UsuarioResponseDTO> atualizaDadosUsuarios(@RequestParam ("id") String id, @RequestBody UsuarioRequestDTO usuarioRequestDTO){
+        return ResponseEntity.ok(usuarioService.atualizaCadastro(usuarioRequestDTO, id));
+    }
+
     @GetMapping()
     public ResponseEntity<UsuarioResponseDTO> buscaUsuarioPorEmail(@RequestParam("email") String email){
         return ResponseEntity.ok(usuarioService.buscaDadosUsuario(email));

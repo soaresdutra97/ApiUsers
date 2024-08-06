@@ -35,29 +35,30 @@ public class UsuarioConverter {
                 .build();
     }
 
+//////////////
+//    public UsuarioResponseDTO paraUsuarioResponseDto(UsuarioEntity entity){
+//        return UsuarioResponseDTO.builder()
+//                .id(entity.getId())
+//                .nome(entity.getNome())
+//                .documento(entity.getDocumento())
+//                .email(entity.getEmail())
+//                .endereco(paraEnderecoResponseDto(entity.getEndereco()))
+//                .build();
+//    }
 
-    public UsuarioResponseDTO paraUsuarioResponseDto(UsuarioEntity entity){
-        return UsuarioResponseDTO.builder()
-                .id(entity.getId())
-                .nome(entity.getNome())
-                .documento(entity.getDocumento())
-                .email(entity.getEmail())
-                .endereco(paraEnderecoResponseDto(entity.getEndereco()))
-                .build();
-    }
+//    private EnderecoResponseDTO paraEnderecoResponseDto(EnderecoEntity entity){
+//        return EnderecoResponseDTO.builder()
+//                .cep(entity.getCep())
+//                .rua(entity.getRua())
+//                .bairro(entity.getBairro())
+//                .cidade(entity.getCidade())
+//                .complemento(entity.getComplemento())
+//                .numero(entity.getNumero())
+//                .build();
+//    }
 
-    private EnderecoResponseDTO paraEnderecoResponseDto(EnderecoEntity entity){
-        return EnderecoResponseDTO.builder()
-                .cep(entity.getCep())
-                .rua(entity.getRua())
-                .bairro(entity.getBairro())
-                .cidade(entity.getCidade())
-                .complemento(entity.getComplemento())
-                .numero(entity.getNumero())
-                .build();
-    }
+//    public List<UsuarioResponseDTO> paraUsuarioResponseDtoList(List<UsuarioEntity> entity){
+//        return entity.stream().map(this::paraUsuarioResponseDto).toList();
+//    }
 
-    public List<UsuarioResponseDTO> paraUsuarioResponseDtoList(List<UsuarioEntity> entity){
-        return entity.stream().map(this::paraUsuarioResponseDto).toList();
-    }
 }

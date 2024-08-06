@@ -1,17 +1,13 @@
 package com.example.cadastro_usuario.api.response;
 
-import lombok.*;
+//DADOS QUE VÃO PARA O CLIENTE COMO RESPOSTA DE UMA REQUISIÇÃO
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class UsuarioResponseDTO {
+public record UsuarioResponseDTO (
+         Long id,
+         String nome,
+         String email,
+         String documento,
+         EnderecoResponseDTO endereco ){
 
-    private Long id;
-    private String nome;
-    private String email;
-    private String documento;
-    private EnderecoResponseDTO endereco;
+
 }

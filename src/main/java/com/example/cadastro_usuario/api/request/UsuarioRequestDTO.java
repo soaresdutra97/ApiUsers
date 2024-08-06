@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+//DADOS QUE VEM DO CLIENTE
 public class UsuarioRequestDTO {
 
     private String nome;
